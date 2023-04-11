@@ -9,7 +9,7 @@ include: "/views/**/*.view"
 
 datagroup: qatar-cement_poc_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+  max_cache_age: "24 hour"
 }
 
 persist_with: qatar-cement_poc_default_datagroup
