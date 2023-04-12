@@ -16,8 +16,8 @@ view: raw_will {
     sql: ${TABLE}.dataset_frequency ;;
   }
 
-  dimension: dry_average_production {
-    type: number
+  measure: dry_average_production {
+    type: sum
     sql: ${TABLE}.dry_average_production ;;
   }
 
@@ -25,33 +25,23 @@ view: raw_will {
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
-  measure: total_dry_average_production {
+  measure: dry_clay_shale {
     type: sum
-    sql: ${dry_average_production} ;;
-  }
-
-  measure: average_dry_average_production {
-    type: average
-    sql: ${dry_average_production} ;;
-  }
-
-  dimension: dry_clay_shale {
-    type: number
     sql: ${TABLE}.dry_clay_shale ;;
   }
 
-  dimension: dry_iron_ore {
-    type: number
+  measure: dry_iron_ore {
+    type: sum
     sql: ${TABLE}.dry_iron_ore ;;
   }
 
-  dimension: dry_limestone {
-    type: number
+  measure: dry_limestone {
+    type: sum
     sql: ${TABLE}.dry_limestone ;;
   }
 
-  dimension: dry_sand {
-    type: number
+  measure: dry_sand {
+    type: sum
     sql: ${TABLE}.dry_sand ;;
   }
 
@@ -73,38 +63,38 @@ view: raw_will {
     sql: ${TABLE}.end_date ;;
   }
 
-  dimension: energy_consumption {
-    type: number
+  measure: energy_consumption {
+    type: sum
     sql: ${TABLE}.energy_consumption ;;
   }
 
-  dimension: moisture_clay_shale {
-    type: number
+  measure: moisture_clay_shale {
+    type: sum
     sql: ${TABLE}.moisture_clay_shale ;;
   }
 
-  dimension: moisture_iron_ore {
-    type: number
+  measure: moisture_iron_ore {
+    type: sum
     sql: ${TABLE}.moisture_iron_ore ;;
   }
 
-  dimension: moisture_limestone {
-    type: number
+  measure: moisture_limestone {
+    type: sum
     sql: ${TABLE}.moisture_limestone ;;
   }
 
-  dimension: moisture_sand {
-    type: number
+  measure: moisture_sand {
+    type: sum
     sql: ${TABLE}.moisture_sand ;;
   }
 
-  dimension: raw_mill_running_hours {
-    type: number
+  measure: raw_mill_running_hours {
+    type: sum
     sql: ${TABLE}.raw_mill_running_hours ;;
   }
 
-  dimension: specific_consumption {
-    type: number
+  measure: specific_consumption {
+    type: sum
     sql: ${TABLE}.specific_consumption ;;
   }
 
@@ -123,28 +113,28 @@ view: raw_will {
     sql: ${TABLE}.start_date ;;
   }
 
-  dimension: wet_average_production {
-    type: number
+  measure: wet_average_production {
+    type: sum
     sql: ${TABLE}.wet_average_production ;;
   }
 
-  dimension: wet_clay_shale {
-    type: number
+  measure: wet_clay_shale {
+    type: sum
     sql: ${TABLE}.wet_clay_shale ;;
   }
 
-  dimension: wet_iron_ore {
-    type: number
+  measure: wet_iron_ore {
+    type: sum
     sql: ${TABLE}.wet_iron_ore ;;
   }
 
-  dimension: wet_limestone {
-    type: number
+  measure: wet_limestone {
+    type: sum
     sql: ${TABLE}.wet_limestone ;;
   }
 
-  dimension: wet_sand {
-    type: number
+  measure: wet_sand {
+    type: sum
     sql: ${TABLE}.wet_sand ;;
   }
 

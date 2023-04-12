@@ -11,7 +11,7 @@ view: cement_mills {
   # A dimension is a groupable field that can be used to filter query results.
   # This dimension will be called "Active Energy Counters Specific Consumption" in Explore.
 
-  dimension: active_energy_counters_specific_consumption {
+  measure: active_energy_counters_specific_consumption {
     type: number
     sql: ${TABLE}.active_energy_counters_specific_consumption ;;
   }
@@ -20,102 +20,92 @@ view: cement_mills {
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
-  measure: total_active_energy_counters_specific_consumption {
-    type: sum
-    sql: ${active_energy_counters_specific_consumption} ;;
-  }
-
-  measure: average_active_energy_counters_specific_consumption {
-    type: average
-    sql: ${active_energy_counters_specific_consumption} ;;
-  }
-
-  dimension: active_energy_counters_total {
+  measure: active_energy_counters_total {
     type: number
     sql: ${TABLE}.active_energy_counters_total ;;
   }
 
-  dimension: cement_mill_6_additives {
+  measure: cement_mill_6_additives {
     type: number
     sql: ${TABLE}.cement_mill_6_additives ;;
   }
 
-  dimension: cement_mill_6_clinker {
+  measure: cement_mill_6_clinker {
     type: number
     sql: ${TABLE}.cement_mill_6_clinker ;;
   }
 
-  dimension: cement_mill_6_gypsum {
+  measure: cement_mill_6_gypsum {
     type: number
     sql: ${TABLE}.cement_mill_6_gypsum ;;
   }
 
-  dimension: cement_mill_6_m6_running_hours {
+  measure: cement_mill_6_m6_running_hours {
     type: number
     sql: ${TABLE}.cement_mill_6_m6_running_hours ;;
   }
 
-  dimension: cement_mill_6_nergy_consumption {
+  measure: cement_mill_6_nergy_consumption {
     type: number
     sql: ${TABLE}.cement_mill_6_nergy_consumption ;;
   }
 
-  dimension: cement_mill_6_pecificconsumption {
+  measure: cement_mill_6_pecificconsumption {
     type: number
     sql: ${TABLE}.cement_mill_6_pecificconsumption ;;
   }
 
-  dimension: cement_mill_6_total_material {
+  measure: cement_mill_6_total_material {
     type: number
     sql: ${TABLE}.cement_mill_6_total_material ;;
   }
 
-  dimension: cement_mill_6_verage_production {
+  measure: cement_mill_6_verage_production {
     type: number
     sql: ${TABLE}.cement_mill_6_verage_production ;;
   }
 
-  dimension: cement_mill_7_additives {
+  measure: cement_mill_7_additives {
     type: number
     sql: ${TABLE}.cement_mill_7_additives ;;
   }
 
-  dimension: cement_mill_7_average_production {
+  measure: cement_mill_7_average_production {
     type: number
     sql: ${TABLE}.cement_mill_7_average_production ;;
   }
 
-  dimension: cement_mill_7_clinker {
+  measure: cement_mill_7_clinker {
     type: number
     sql: ${TABLE}.cement_mill_7_clinker ;;
   }
 
-  dimension: cement_mill_7_cm7_running_hours {
+  measure: cement_mill_7_cm7_running_hours {
     type: number
     sql: ${TABLE}.cement_mill_7_cm7_running_hours ;;
   }
 
-  dimension: cement_mill_7_energy_consumption {
+  measure: cement_mill_7_energy_consumption {
     type: number
     sql: ${TABLE}.cement_mill_7_energy_consumption ;;
   }
 
-  dimension: cement_mill_7_gypsum {
+  measure: cement_mill_7_gypsum {
     type: number
     sql: ${TABLE}.cement_mill_7_gypsum ;;
   }
 
-  dimension: cement_mill_7_specific_consumption {
+  measure: cement_mill_7_specific_consumption {
     type: number
     sql: ${TABLE}.cement_mill_7_specific_consumption ;;
   }
 
-  dimension: cement_mill_7_total_material {
+  measure: cement_mill_7_total_material {
     type: number
     sql: ${TABLE}.cement_mill_7_total_material ;;
   }
 
-  dimension: cement_total_production {
+  measure: cement_total_production {
     type: number
     sql: ${TABLE}.cement_total_production ;;
   }
@@ -158,7 +148,7 @@ view: cement_mills {
     sql: ${TABLE}.start_date ;;
   }
 
-  dimension: utilities_total_energy_total {
+  measure: utilities_total_energy_total {
     type: number
     sql: ${TABLE}.utilities_total_energy_total ;;
   }

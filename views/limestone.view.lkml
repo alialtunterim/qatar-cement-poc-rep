@@ -2,7 +2,7 @@
 view: limestone {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `test.limestone`
+  sql_table_name: `kyilmaz-sandbox.test.limestone`
     ;;
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -11,7 +11,7 @@ view: limestone {
   # A dimension is a groupable field that can be used to filter query results.
   # This dimension will be called "Average Production" in Explore.
 
-  dimension: average_production {
+  measure: average_production {
     type: number
     sql: ${TABLE}.average_production ;;
   }
@@ -20,23 +20,23 @@ view: limestone {
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
-  measure: total_average_production {
+  # measure: total_average_production {
+  #  type: sum
+  #  sql: ${average_production} ;;
+  # }
+
+  # measure: average_average_production {
+  #  type: average
+  #  sql: ${average_production} ;;
+  # }
+
+  measure: clay_pile_c {
     type: sum
-    sql: ${average_production} ;;
-  }
-
-  measure: average_average_production {
-    type: average
-    sql: ${average_production} ;;
-  }
-
-  dimension: clay_pile_c {
-    type: number
     sql: ${TABLE}.clay_pile_c ;;
   }
 
-  dimension: clay_pile_d {
-    type: number
+  measure: clay_pile_d {
+    type: sum
     sql: ${TABLE}.clay_pile_d ;;
   }
 
@@ -63,33 +63,33 @@ view: limestone {
     sql: ${TABLE}.end_date ;;
   }
 
-  dimension: energy_consumption {
-    type: number
+  measure: energy_consumption {
+    type: sum
     sql: ${TABLE}.energy_consumption ;;
   }
 
-  dimension: limestone_pile_a {
-    type: number
+  measure: limestone_pile_a {
+    type: sum
     sql: ${TABLE}.limestone_pile_a ;;
   }
 
-  dimension: limestone_pile_b {
-    type: number
+  measure: limestone_pile_b {
+    type: sum
     sql: ${TABLE}.limestone_pile_b ;;
   }
 
-  dimension: motor_1_running_time {
-    type: number
+  measure: motor_1_running_time {
+    type: sum
     sql: ${TABLE}.motor_1_running_time ;;
   }
 
-  dimension: motor_2_running_time {
-    type: number
+  measure: motor_2_running_time {
+    type: sum
     sql: ${TABLE}.motor_2_running_time ;;
   }
 
-  dimension: specific_consumption {
-    type: number
+  measure: specific_consumption {
+    type: sum
     sql: ${TABLE}.specific_consumption ;;
   }
 
@@ -108,8 +108,8 @@ view: limestone {
     sql: ${TABLE}.start_date ;;
   }
 
-  dimension: total_production {
-    type: number
+  measure: total_production {
+    type: sum
     sql: ${TABLE}.total_production ;;
   }
 

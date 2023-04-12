@@ -11,13 +11,13 @@ view: kiln_cooler {
   # A dimension is a groupable field that can be used to filter query results.
   # This dimension will be called "Average Production Td" in Explore.
 
-  dimension: average_production_td {
-    type: number
+  measure: average_production_td {
+    type: sum
     sql: ${TABLE}.average_production_td ;;
   }
 
-  dimension: average_production_th {
-    type: number
+  measure: average_production_th {
+    type: sum
     sql: ${TABLE}.average_production_th ;;
   }
 
@@ -26,8 +26,8 @@ view: kiln_cooler {
     sql: ${TABLE}.dataset_frequency ;;
   }
 
-  dimension: electric_consuption_total_clinker {
-    type: number
+  measure: electric_consuption_total_clinker {
+    type: sum
     sql: ${TABLE}.electric_consuption_total_clinker ;;
   }
 
@@ -49,33 +49,33 @@ view: kiln_cooler {
     sql: ${TABLE}.end_date ;;
   }
 
-  dimension: gas_calorific_valu {
-    type: number
+  measure: gas_calorific_valu {
+    type: sum
     sql: ${TABLE}.gas_calorific_valu ;;
   }
 
-  dimension: gas_volum_aux_burner {
-    type: number
+  measure: gas_volum_aux_burner {
+    type: sum
     sql: ${TABLE}.gas_volum_aux_burner ;;
   }
 
-  dimension: gas_volume_main_burner {
-    type: number
+  measure: gas_volume_main_burner {
+    type: sum
     sql: ${TABLE}.gas_volume_main_burner ;;
   }
 
-  dimension: gas_volume_pc_burner {
-    type: number
+  measure: gas_volume_pc_burner {
+    type: sum
     sql: ${TABLE}.gas_volume_pc_burner ;;
   }
 
-  dimension: kiln_mtbs_30_day {
-    type: number
+  measure: kiln_mtbs_30_day {
+    type: sum
     sql: ${TABLE}.kiln_mtbs_30_day ;;
   }
 
-  dimension: kiln_number_of_stoppag {
-    type: number
+  measure: kiln_number_of_stoppag {
+    type: sum
     sql: ${TABLE}.kiln_number_of_stoppag ;;
   }
 
@@ -83,28 +83,18 @@ view: kiln_cooler {
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
-  measure: total_kiln_number_of_stoppag {
+  measure: kiln_running_hours {
     type: sum
-    sql: ${kiln_number_of_stoppag} ;;
-  }
-
-  measure: average_kiln_number_of_stoppag {
-    type: average
-    sql: ${kiln_number_of_stoppag} ;;
-  }
-
-  dimension: kiln_running_hours {
-    type: number
     sql: ${TABLE}.kiln_running_hours ;;
   }
 
-  dimension: ratio {
-    type: number
+  measure: ratio {
+    type: sum
     sql: ${TABLE}.ratio ;;
   }
 
-  dimension: specific_heat_consuption {
-    type: number
+  measure: specific_heat_consuption {
+    type: sum
     sql: ${TABLE}.specific_heat_consuption ;;
   }
 
@@ -123,18 +113,18 @@ view: kiln_cooler {
     sql: ${TABLE}.start_date ;;
   }
 
-  dimension: total_clinker {
-    type: number
+  measure: total_clinker {
+    type: sum
     sql: ${TABLE}.total_clinker ;;
   }
 
-  dimension: total_energy {
-    type: number
+  measure: total_energy {
+    type: sum
     sql: ${TABLE}.total_energy ;;
   }
 
-  dimension: total_meal {
-    type: number
+  measure: total_meal {
+    type: sum
     sql: ${TABLE}.total_meal ;;
   }
 
