@@ -12,7 +12,7 @@ view: limestone {
   # This dimension will be called "Average Production" in Explore.
 
   measure: average_production {
-    type: number
+    type: sum
     sql: ${TABLE}.average_production ;;
   }
 
