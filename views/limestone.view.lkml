@@ -93,7 +93,7 @@ view: limestone {
     sql: ${TABLE}.specific_consumption ;;
   }
 
-  dimension_group: start {
+  dimension_group: _ {
     type: time
     timeframes: [
       raw,

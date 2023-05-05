@@ -98,7 +98,7 @@ view: kiln_cooler {
     sql: ${TABLE}.specific_heat_consuption ;;
   }
 
-  dimension_group: start {
+  dimension_group: _ {
     type: time
     timeframes: [
       raw,

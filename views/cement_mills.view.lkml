@@ -133,7 +133,7 @@ view: cement_mills {
     sql: ${TABLE}.end_date ;;
   }
 
-  dimension_group: start {
+  dimension_group: _ {
     type: time
     timeframes: [
       raw,
