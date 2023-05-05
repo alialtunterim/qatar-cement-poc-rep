@@ -45,12 +45,12 @@ view: cement_mills {
     sql: ${TABLE}.cement_mill_6_m6_running_hours ;;
   }
 
-  measure: cement_mill_6_nergy_consumption {
+  measure: cement_mill_6_energy_consumption {
     type: sum
     sql: ${TABLE}.cement_mill_6_nergy_consumption ;;
   }
 
-  measure: cement_mill_6_pecificconsumption {
+  measure: cement_mill_6_specific_consumption {
     type: sum
     sql: ${TABLE}.cement_mill_6_pecificconsumption ;;
   }
@@ -60,7 +60,7 @@ view: cement_mills {
     sql: ${TABLE}.cement_mill_6_total_material ;;
   }
 
-  measure: cement_mill_6_verage_production {
+  measure: cement_mill_6_average_production {
     type: sum
     sql: ${TABLE}.cement_mill_6_verage_production ;;
   }
