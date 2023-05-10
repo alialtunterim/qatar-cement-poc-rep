@@ -89,7 +89,7 @@ view: kiln_cooler {
   }
 
   measure: ratio {
-    type: sum
+    type: average
     sql: ${TABLE}.ratio ;;
   }
 
