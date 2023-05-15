@@ -13,11 +13,13 @@ view: kiln_cooler {
 
   measure: average_production_td {
     type: sum
+    value_format: "0"
     sql: ${TABLE}.average_production_td ;;
   }
 
   measure: average_production_th {
     type: sum
+    value_format: "0"
     sql: ${TABLE}.average_production_th ;;
   }
 
@@ -56,16 +58,19 @@ view: kiln_cooler {
 
   measure: gas_volum_aux_burner {
     type: sum
+    value_format: "0"
     sql: ${TABLE}.gas_volum_aux_burner ;;
   }
 
   measure: gas_volume_main_burner {
     type: sum
+    value_format: "0"
     sql: ${TABLE}.gas_volume_main_burner ;;
   }
 
   measure: gas_volume_pc_burner {
     type: sum
+    value_format: "0"
     sql: ${TABLE}.gas_volume_pc_burner ;;
   }
 
@@ -90,6 +95,7 @@ view: kiln_cooler {
 
   measure: ratio {
     type: average
+    value_format: "0.00"
     sql: ${TABLE}.ratio ;;
   }
 

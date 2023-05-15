@@ -17,7 +17,7 @@ view: raw_will {
   }
 
   measure: dry_average_production {
-    type: sum
+    type: average
     sql: ${TABLE}.dry_average_production ;;
   }
 
@@ -27,16 +27,19 @@ view: raw_will {
 
   measure: dry_clay_shale {
     type: sum
+    value_format: "0.00"
     sql: ${TABLE}.dry_clay_shale ;;
   }
 
   measure: dry_iron_ore {
     type: sum
+    value_format: "0.00"
     sql: ${TABLE}.dry_iron_ore ;;
   }
 
   measure: dry_limestone {
     type: sum
+    value_format: "0.00"
     sql: ${TABLE}.dry_limestone ;;
   }
 
@@ -64,7 +67,7 @@ view: raw_will {
   }
 
   measure: energy_consumption {
-    type: sum
+    type: average
     sql: ${TABLE}.energy_consumption ;;
   }
 
@@ -89,12 +92,12 @@ view: raw_will {
   }
 
   measure: raw_mill_running_hours {
-    type: sum
+    type: average
     sql: ${TABLE}.raw_mill_running_hours ;;
   }
 
   measure: specific_consumption {
-    type: sum
+    type: average
     sql: ${TABLE}.specific_consumption ;;
   }
 
@@ -114,22 +117,25 @@ view: raw_will {
   }
 
   measure: wet_average_production {
-    type: sum
+    type: average
     sql: ${TABLE}.wet_average_production ;;
   }
 
   measure: wet_clay_shale {
     type: sum
+    value_format: "0.00"
     sql: ${TABLE}.wet_clay_shale ;;
   }
 
   measure: wet_iron_ore {
     type: sum
+    value_format: "0.00"
     sql: ${TABLE}.wet_iron_ore ;;
   }
 
   measure: wet_limestone {
     type: sum
+    value_format: "0.00"
     sql: ${TABLE}.wet_limestone ;;
   }
 

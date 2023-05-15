@@ -80,11 +80,13 @@ view: limestone {
 
   measure: motor_1_running_time {
     type: sum
+    value_format: "0.00"
     sql: ${TABLE}.motor_1_running_time ;;
   }
 
   measure: motor_2_running_time {
     type: sum
+    value_format: "0.00"
     sql: ${TABLE}.motor_2_running_time ;;
   }
 
